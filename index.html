@@ -1,0 +1,46 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        body {
+            width: 80%;
+            margin: auto;
+        }
+
+        .cool {
+            background-color: rebeccapurple;
+            color: white;
+        }
+    </style>
+    <title>Vue Basics</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- Rendering static data -->
+        <h1>{{ title }}</h1>
+        <!-- Calling methods -->
+        <h2>{{ greet() }}</h2>
+
+        <br>
+        <hr>
+        <br>
+        <!-- Data-binding -->
+        <h1 v-bind:class="my_cool_class">Hi there {{ name }}</h1>
+        <!-- Data-binding (shorthand) -->
+        <h1 :class="my_cool_class">Hi there {{ name }}</h1>
+
+        <br>
+        <hr>
+        <br>
+        <!-- Two-way binding with v-model -->
+        <input type="text" v-model:value="my_cool_class">
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
