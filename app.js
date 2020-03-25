@@ -9,6 +9,8 @@ new Vue({
         strength: 1,
         dexterity: 1,
         XP: 1,
+        hasShield : true,
+        inventory : ['Simple Belt', 'Simple Gloves', 'Sword of Fire', 'Helmet of Healing']
     },
 
     // Our collection of custom methods which we can call from the view

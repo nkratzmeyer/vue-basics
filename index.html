@@ -35,14 +35,13 @@
 
         <br>
         <hr>
-        <br>
         <!-- Two-way binding with v-model -->
         <input type="text" v-model:value="name">
 
         <br>
-        ----------------------------------------
+        <hr>
         <br>
-
+        <h2>Handling Events</h2>
         <label>Strength: {{strength}}</label>
         <!-- Handle events inline javascript -->
         <button v-on:click="strength++">+</button>
@@ -58,6 +57,20 @@
         <!-- Handle events with custom method - Shorthand -->
         <button @click="increaseXP(20)">+</button>
 
+        <br>
+        <h2>Conditional Rendering</h2>
+        <!-- this <p> element will only be rendered if hasShield is true in our model -->
+        <p v-if="hasShield">{{ name }} has a shield!</p>
+        <p v-else>{{ name }} does NOT have a shield!</p>
+
+        <h2>Looping</h2>
+        <!-- Display our inventory items using v-for -->
+        <h3>Inventory Items</h3>
+        <ul>
+            <li v-for="item in inventory">
+                {{ item }}
+            </li>
+        </ul>
     </div>
 
     <script src="app.js"></script>
