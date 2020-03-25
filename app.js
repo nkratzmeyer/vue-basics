@@ -5,13 +5,19 @@ new Vue({
     data: {
         title: 'Welcome to Vue!',
         name: 'Big Boss',
-        my_cool_class: 'cool'
+        my_cool_class: 'cool',
+        strength: 1,
+        dexterity: 1,
+        XP: 1,
     },
 
     // Our collection of custom methods which we can call from the view
     methods :{
         greet(){
             return `Hello ${this.name}`;
+        },
+        increaseXP(amount){
+            this.XP += amount;
         }
     }
 });

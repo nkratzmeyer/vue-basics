@@ -38,6 +38,26 @@
         <br>
         <!-- Two-way binding with v-model -->
         <input type="text" v-model:value="name">
+
+        <br>
+        ----------------------------------------
+        <br>
+
+        <label>Strength: {{strength}}</label>
+        <!-- Handle events inline javascript -->
+        <button v-on:click="strength++">+</button>
+        <button v-on:click="strength--">-</button>
+        <br>
+        <label>Dexterity: {{dexterity}}</label>
+        <!-- Handle events inline javascript - Shorthand -->
+        <button @click="dexterity++">+</button>
+        <button @click="dexterity--">-</button>
+
+        <br>
+        <label>XP: {{XP}}</label>
+        <!-- Handle events with custom method - Shorthand -->
+        <button @click="increaseXP(20)">+</button>
+
     </div>
 
     <script src="app.js"></script>
