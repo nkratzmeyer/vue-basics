@@ -124,3 +124,5 @@ In the snippet above, we are telling Vue to render a new `<li>` element for each
 ## Conclusion
 
 In this post I've gone over handling events, conditional rendering, and looping using VueJS. Honestly, that pretty much covers the very, very basics of using Vue. I'm very much open to requests for further explanation/examples on the topics covered in these two articles. Barring that, I'll probably jump into components and using Vue the "right way". Hope this was informative and comments/critiques/requests are always welcome!
+
+Code for this article is [here](https://github.com/nkratzmeyer/vue-basics/tree/Part2)
