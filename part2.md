@@ -106,7 +106,7 @@ Now we have a simple array of "inventory" items that we can loop over and displa
 <!-- Display our inventory items using v-for -->
 <h2>Inventory Items</h2>
 <ul>
-  <li v-for="item in inventory">
+  <li v-for="item in inventory" v-bind:key="item">
     {{ item }}
   </li>
 </ul>
@@ -116,10 +116,11 @@ In the snippet above, we are telling Vue to render a new `<li>` element for each
 
 ```html
 <!-- Pretend that our data array is an array of objects -->
-<li v-for="item in inventory">
+<li v-for="item in inventory" v-bind:key="item.id">
   {{ item.propertyName }}
 </li>
 ```
+For now, ignore the **v-bind:key** part of this code. In advanced scenarios where you might be manipulating the array, Vue will need a unique key for each item iterated over. This is irrelevant in our simple scenario.
 
 ## Conclusion
 

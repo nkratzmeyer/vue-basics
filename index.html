@@ -61,13 +61,11 @@
         <h2>Conditional Rendering</h2>
         <!-- this <p> element will only be rendered if hasShield is true in our model -->
         <p v-if="hasShield">{{ name }} has a shield!</p>
-        <p v-else>{{ name }} does NOT have a shield!</p>
-
         <h2>Looping</h2>
         <!-- Display our inventory items using v-for -->
         <h3>Inventory Items</h3>
         <ul>
-            <li v-for="item in inventory">
+            <li v-for="item in inventory" v-bind:key="item">
                 {{ item }}
             </li>
         </ul>
